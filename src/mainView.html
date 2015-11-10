@@ -1,6 +1,37 @@
-<div style="height:600px;width:400px;background-color:gray;">
+<link rel="stylesheet" type="text/css" href="src/css/MainView.css">
+<ons-page>
+  <ons-toolbar>
+    <div class="center">ToDo</div>
+  </ons-toolbar>
 
-サンプル
-{{name}}
+  <my-date-view></my-date-view>
 
-</div>
+  <ons-list style="margin-top:150px;border-top: none"><ons-list-item style="line-height: 1; padding: 0;">
+    <ons-row class="action">
+      <ons-col class="action-col">
+        <div class="action-icon"><ons-icon icon="ion-ios-pulse"></ons-icon></div>
+        <div class="action-label">Stats</div>
+      </ons-col>
+
+      <ons-col class="action-col">
+        <div class="action-icon"><ons-icon icon="ion-ios-book-outline"></ons-icon></div>
+        <div class="action-label">Logs</div>
+      </ons-col>
+
+      <ons-col class="action-col">
+        <div class="action-icon"><ons-icon icon="ion-gear-a"></ons-icon></div>
+        <div class="action-label">Settings</div>
+      </ons-col>
+    </ons-row>
+  </ons-list-item></ons-list>
+
+  <ons-row style="margin-top:10px">
+    <ons-col width="300px">
+      <input type="text" class="text-input" placeholder="ToDo" style="margin-left:10px;width:100%;height:40px">
+    </ons-col>
+    <ons-col>
+      <ons-button modifier="cta" style="margin-left:30px">ADD</ons-button>
+    </ons-col>
+  </ons-row>
+
+</ons-page>

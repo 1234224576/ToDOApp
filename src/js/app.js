@@ -1,4 +1,4 @@
-var app = angular.module('myApp',['ngRoute']);
+var app = angular.module('myApp',['ngRoute','onsen']);
 
 app.config(function ($routeProvider) {
     $routeProvider
