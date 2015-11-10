@@ -1,5 +1,11 @@
-app.factory('getToDayString', function() {
+app.factory('fetchToDoData', function() {
+  return{
 
-
-  return "あいうえお";
+    getAllToDoData(date){
+      return date;
+    },
+    setToDoData(date,data){
+      return "";
+    }
+  }
 });

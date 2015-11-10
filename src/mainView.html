@@ -1,5 +1,7 @@
 <link rel="stylesheet" type="text/css" href="src/css/MainView.css">
+
 <ons-page>
+
   <ons-toolbar>
     <div class="center">ToDo</div>
   </ons-toolbar>
@@ -27,11 +29,26 @@
 
   <ons-row style="margin-top:10px">
     <ons-col width="300px">
-      <input type="text" class="text-input" placeholder="ToDo" style="margin-left:10px;width:100%;height:40px">
+      <input type="text" class="text-input" ng-model="todoContent" placeholder="ToDo" style="margin-left:10px;width:100%;height:40px">
     </ons-col>
     <ons-col>
-      <ons-button modifier="cta" style="margin-left:30px">ADD</ons-button>
+      <ons-button modifier="cta" style="margin-left:30px" ng-mousedown="tapAddBtn()">ADD</ons-button>
     </ons-col>
   </ons-row>
+
+  <ons-scroller style="height:270px">
+      <ons-list>
+        <ons-list-item ng-repeat="data in datas">
+          <label class="checkbox checkbox--list-item">
+            <input type="checkbox" ng-model="data.checked" ng-checked="data.complete" ng-click="toggleCheck()">
+            <div class="checkbox__checkmark checkbox--list-item__checkmark"></div>
+            {{data["title"]}}
+            <span class="list-item-action" ng-click="deleteData($index)">
+              <ons-icon icon="ion-close" size="22px"></ons-icon>
+            </span>
+          </label>
+        </ons-list-item>
+      </ons-list>
+    </ons-scroller>
 
 </ons-page>
