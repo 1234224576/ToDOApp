@@ -1,0 +1,21 @@
+{
+  "name": "ToDoApp",
+  "version": "0.0.0",
+  "homepage": "https://github.com/1234224576/ToDoApp",
+  "authors": [
+    "曽和修平 <sowashuhei@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.7",
+    "angular-bootstrap": "~0.14.3",
+    "angular-route": "1.4.7"
+  }
+}
