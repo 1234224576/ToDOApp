@@ -1,4 +1,4 @@
-var app = angular.module('myApp',['ngRoute','xc.indexedDB','onsen']);
+var app = angular.module('myApp',['ngRoute','indexedDB','onsen']);
 
 app.config(function ($routeProvider,$indexedDBProvider) {
     $routeProvider

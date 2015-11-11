@@ -19,6 +19,7 @@
     "angular-route": "1.4.7",
     "onsenui": "~1.3.12",
     "ngstorage": "~0.3.10",
-    "angularjs-indexedDB": "*"
+    "angularjs-indexedDB": "*",
+    "angular-indexed-db": "~1.1.3"
   }
 }
