@@ -18,7 +18,7 @@ app.directive('myDateView', function() {
       if((h >= 21) && (h < 24)) scope.imageSrc = "./src/img/Night.jpg";
       scope.year = date.getFullYear();
       scope.month = date.getMonth()+1;
-      scope.day = date.getDay();
+      scope.day = date.getDate();
     }
   };
 });
