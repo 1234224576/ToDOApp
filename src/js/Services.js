@@ -1,5 +1,3 @@
-
-
 app.factory('writeToDoData', function($indexedDB) {
   return{
     write(data,date){

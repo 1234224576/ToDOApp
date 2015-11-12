@@ -17,6 +17,12 @@
   filter: opacity(0.7);
 }
 
+.todoCell{
+  margin-left:30px;
+  margin-top:-37px;
+  width:320px;
+  line-height:30px;
+}
 .dateLabel{
   position: absolute;
   color: white;
