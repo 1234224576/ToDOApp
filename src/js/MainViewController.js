@@ -1,4 +1,4 @@
-app.controller('MainController', function ($scope,$indexedDB,writeToDoData) {
+app.controller('MainViewController', function ($scope,$indexedDB,$location,writeToDoData) {
   $scope.datas = [];
   $scope.yesterdayDatas = [];
 
@@ -40,6 +40,16 @@ app.controller('MainController', function ($scope,$indexedDB,writeToDoData) {
     todoData.splice(index, 1);
     writeToDoData.write(todoData,date);
   };
+
+  $scope.tapStats = function(){
+    $location.path('/stats');
+  }
+  $scope.tapLog = function(){
+    $location.path('/log');
+  }
+  $scope.tapSetting = function(){
+    $location.path('/settings');
+  }
 
   function getData(date,isToday){
     $indexedDB.openStore('todo',function(store){

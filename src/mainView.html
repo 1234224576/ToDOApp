@@ -7,19 +7,19 @@
   </ons-toolbar>
 
   <my-date-view></my-date-view>
-  <ons-list style="margin-top:150px;border-top: none"><ons-list-item style="line-height: 1; padding: 0;">
+  <ons-list style="margin-top:150px;border-top: none" class="animated"><ons-list-item style="line-height: 1; padding: 0;">
     <ons-row class="action">
-      <ons-col class="action-col">
+      <ons-col ng-click="tapStats()" class="action-col">
         <div class="action-icon"><ons-icon icon="ion-ios-pulse"></ons-icon></div>
         <div class="action-label">Stats</div>
       </ons-col>
 
-      <ons-col class="action-col">
+      <ons-col  ng-click="tapLog()" class="action-col">
         <div class="action-icon"><ons-icon icon="ion-ios-book-outline"></ons-icon></div>
         <div class="action-label">Logs</div>
       </ons-col>
 
-      <ons-col class="action-col">
+      <ons-col  ng-click="tapSetting()" class="action-col">
         <div class="action-icon"><ons-icon icon="ion-gear-a"></ons-icon></div>
         <div class="action-label">Settings</div>
       </ons-col>

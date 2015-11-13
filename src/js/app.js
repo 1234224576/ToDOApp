@@ -1,10 +1,19 @@
-var app = angular.module('myApp',['ngRoute','indexedDB','onsen']);
+var app = angular.module('myApp',['ngRoute','ngAnimate','indexedDB','onsen']);
 
 app.config(function ($routeProvider,$indexedDBProvider) {
     $routeProvider
       .when('/', {
           templateUrl: 'src/mainView.html',
-          controller: 'MainController'
+          controller: 'MainViewController'
+      }).when('/stats', {
+          templateUrl: 'src/statsView.html',
+          controller: 'StatsViewController'
+      }).when('/log', {
+          templateUrl: 'src/logView.html',
+          controller: 'LogViewController'
+      }).when('/settings', {
+          templateUrl: 'src/settingsView.html',
+          controller: 'SettingsViewController'
       })
       .otherwise({
           redirectTo: '/'
