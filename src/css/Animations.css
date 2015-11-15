@@ -9,9 +9,11 @@
     width: 100%;
     min-height: 500px;
 }
-.ng-enter, .ng-leave {
-    transition: 0.5s cubic-bezier(.55,0,.1,1) all;
-}
+
+/*ここを入れるとフェードするが、CSSの適用が遅れる*/
+/*.ng-enter, .ng-leave {
+    transition: 0.1s cubic-bezier(.55,0,.1,1) all;
+}*/
 .ng-enter {
     opacity: 0;
 }
