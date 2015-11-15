@@ -54,7 +54,7 @@ app.controller('MainViewController', function ($scope,$indexedDB,$location,write
   function getData(date,isToday){
     $indexedDB.openStore('todo',function(store){
       var find = store.query();
-      find = find.$eq(date.getFullYear()).$index("month_idx");
+      find = find.$eq(date.getFullYear()).$index("year_idx");
       find = find.$eq(date.getMonth()+1).$index("month_idx");
       find = find.$eq(date.getDate()).$index("day_idx");
       store.eachWhere(find).then(function(e){

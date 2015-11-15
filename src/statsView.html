@@ -1,9 +1,24 @@
+<link rel="stylesheet" type="text/css" href="src/css/StatsView.css">
 <ons-page>
 
   <ons-toolbar>
     <div class="left"><ons-toolbar-button ng-click="tapBackButton()"><ons-icon icon="ion-ios-arrow-back" size="34px"></ons-icon></ons-toolbar-button></div>
     <div class="center">Stats</div>
   </ons-toolbar>
+  <p>
+    <p>{{currentDate.getMonth()+1}}月
+    タスク達成率<span style="margin-left:5px;">{{monthTaskRate}}%</span><span style="margin-left:10px;">{{nowTodoCompleted}}/{{nowTodoSum}}</span></p>
+    <svg style="margin-top:-10px;" id="dayly_graph" style="margin-top: 30px;"></svg>
 
+    <!-- <div class="box effect1">
+        <h3>{{currentDate.getMonth()+1}}月のタスク達成率{{monthTaskRate}}%</h3>
+    </div> -->
+  </p>
+  <div class="line"></div>
+  <p>
+    <p>{{currentDate.getMonth()+1}}月
+    タスク達成率<span style="margin-left:5px;">{{monthTaskRate}}%</span><span style="margin-left:10px;">{{nowTodoCompleted}}/{{nowTodoSum}}</span></p>
+    <svg style="margin-top:-10px;" id="dayly_graph2" style="margin-top: 30px;"></svg>
+  </p>
 
 </ons-page>

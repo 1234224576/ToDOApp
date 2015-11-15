@@ -1,0 +1,58 @@
+p{
+  margin-left: 10px;
+  text-shadow: -1px 1px 0 rgba(255,255,255,1);
+  color: #444;
+}
+
+.header{
+
+}
+
+.box h3{
+    text-align:center;
+    position:relative;
+    top:80px;
+}
+.box {
+    width:70%;
+    height:200px;
+    background:#FFF;
+    margin:40px auto;
+}
+.effect1{
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+}
+
+div .line {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 1px 0 rgba(255,255,255,1);
+}
+
+/*Graph*/
+svg{
+  width: 380px;
+  height: 170px;
+  /*border: 1px solid black;*/
+  margin-left: 10px;
+
+
+}
+.bar{
+  fill:darkorange;
+}
+.barNum{
+  font-size: 9px;
+  text-anchor:middle;
+}
+.axis path,.axis line {
+   fill: none;
+   stroke: black;
+   shape-rendering: crispEdges;
+}
+
+.axis text {
+   font-family: sans-serif;
+   font-size: 10px;
+}

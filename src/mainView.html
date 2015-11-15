@@ -51,9 +51,9 @@
         <ons-list-header>YesterDay</ons-list-header>
         <ons-list-item ng-repeat="yesterdayData in yesterdayDatas">
           <label class="checkbox checkbox--list-item">
-            <input type="checkbox" ng-model="yesterdayData.checked" ng-checked="yesterdayData.complete" ng-click="toggleCheck(false)"></input>
+            <input ng-cloak type="checkbox" ng-model="yesterdayData.checked" ng-checked="yesterdayData.complete" ng-click="toggleCheck(false)"></input>
             <div class="checkbox__checkmark checkbox--list-item__checkmark"></div>
-            <div class="todoCell">{{yesterdayData["title"]}}</div>
+            <div class="todoCell" ng-cloak>{{yesterdayData["title"]}}</div>
             <span class="list-item-action" ng-click="deleteData($index,false)">
               <ons-icon icon="ion-close" size="22px"></ons-icon>
             </span>
