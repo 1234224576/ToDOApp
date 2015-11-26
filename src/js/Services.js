@@ -34,11 +34,22 @@ app.factory('StatsData', function($indexedDB) {
           callback(e,sumTask,completeTask);
         });
       });
+    },
+  }
+});
 
-
-      // return "テスト";
-
-
+app.factory('LogsData', function($indexedDB) {
+  return{
+    getLogData(date,callback){
+      $indexedDB.openStore('todo',function(store){
+        var find = store.query();
+        find = find.$eq(date.getFullYear()).$index("year_idx");
+        find = find.$eq(date.getMonth()+1).$index("month_idx");
+        store.eachWhere(find).then(function(e){
+          console.log(e);
+          callback(e);
+        });
+      });
     },
   }
 });

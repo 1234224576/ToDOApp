@@ -1,17 +1,26 @@
 app.controller('StatsViewController', function ($scope,$location,$indexedDB,StatsData) {
 
   $scope.currentDate = new Date();
+  $scope.beforeDate = new Date($scope.currentDate.getFullYear(),$scope.currentDate.getMonth(),0);
 
-  StatsData.getMonthTaskAchivementRate(new Date(),function(data,sum,complete){
+
+  StatsData.getMonthTaskAchivementRate($scope.currentDate,function(data,sum,complete){
     console.log(sum+"/"+complete);
     $scope.nowTodoSum = sum;
     $scope.nowTodoCompleted = complete;
-    $scope.monthTaskRate = Math.floor((complete/sum)*100);
+    $scope.monthTaskRate = Math.floor((complete/(sum==0)? 1:sum)*100);
     drawDaylyRateGraph("#dayly_graph",data,$scope.currentDate);
-    drawDaylyRateGraph("#dayly_graph2",data,$scope.currentDate);
-
   });
-  
+
+  StatsData.getMonthTaskAchivementRate($scope.beforeDate ,function(data,sum,complete){
+    console.log(sum+"/"+complete);
+    $scope.beforeTodoSum = sum;
+    $scope.beforeTodoCompleted = complete;
+    $scope.beforeMonthTaskRate = Math.floor((complete/(sum==0)? 1:sum)*100);
+    drawDaylyRateGraph("#dayly_graph2",data,$scope.beforeDate);
+  });
+
+
   $scope.tapBackButton = function(){
     $location.path('/');
   }

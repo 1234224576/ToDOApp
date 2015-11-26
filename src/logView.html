@@ -5,5 +5,30 @@
     <div class="center">Log</div>
   </ons-toolbar>
 
+  <ons-page>
+
+
+    <ons-button modifier="cta" ng-click="tapBeforeMonth()">前月</ons-button>
+    <span style="margin-left:100px;">{{currentDate.getFullYear()}}年{{currentDate.getMonth()+1}}月</span>
+    <ons-button style="float:right" modifier="cta" ng-click="tapNextMonth()">次月</ons-button>
+
+    <ons-scroller>
+      <ons-list>
+        <div ng-repeat="todo in datas">
+          <ons-list-header>{{todo.date}}</ons-list-header>
+          <div ng-repeat="d in todo['data']['data']">
+            <ons-list-item>
+              <label class="checkbox checkbox--list-item">
+              <input type="checkbox" ng-model="d.checked" ng-checked="d.complete" disabled='disabled'></input>
+              <div class="checkbox__checkmark checkbox--list-item__checkmark"></div>
+              {{d.title}}
+            </label>
+            </ons-list-item>
+          </div>
+        </div>
+      </ons-list>
+    </ons-scroller>
+  </ons-page>
+</ons-navigator>
 
 </ons-page>
