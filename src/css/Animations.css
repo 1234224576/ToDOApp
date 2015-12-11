@@ -1,40 +1,23 @@
-
--container {
-    position: relative;
-}
-.ng-animate {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 500px;
+.animate{
+	-webkit-transition:linear 0.5s;
+	-moz-transition:linear 0.5s;
+	-ms-transition:linear 0.5s;
+	-o-transition:linear 0.5s;
+	transition:linear 0.5s;
 }
 
-/*ここを入れるとフェードするが、CSSの適用が遅れる*/
-/*.ng-enter, .ng-leave {
-    transition: 0.1s cubic-bezier(.55,0,.1,1) all;
-}*/
-.ng-enter {
-    opacity: 0;
-}
-.ng-enter.ng-enter-active, .ng-leave {
-    opacity: 1;
-}
-.ng-leave.ng-leave-active {
-    opacity: 0;
+.animate.ng-enter{
+	opacity:0;
 }
 
-.name.ng-anchor-in, .thumb.ng-anchor-in,.shadow.ng-anchor-in {
-    transition: 0.5s cubic-bezier(.55,0,.1,1) all;
+.animate.ng-enter-active{
+	opacity:1;
 }
-.profile.shadow {
-    padding: 20px;
+
+.animate.ng-leave{
+	opacity:1;
 }
-.profile.name {
-    font-size: 24px;
-    font-weight: bold;
-}
-.profile-container {
-    padding: 20px;
-    margin: 20px;
+
+.animate.ng-leave-active{
+	opacity:0;
 }

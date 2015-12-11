@@ -3,9 +3,7 @@ app.controller('StatsViewController', function ($scope,$location,$indexedDB,Stat
   $scope.currentDate = new Date();
   $scope.beforeDate = new Date($scope.currentDate.getFullYear(),$scope.currentDate.getMonth(),0);
 
-
   StatsData.getMonthTaskAchivementRate($scope.currentDate,function(data,sum,complete){
-    console.log(sum+"/"+complete);
     $scope.nowTodoSum = sum;
     $scope.nowTodoCompleted = complete;
     $scope.monthTaskRate = Math.floor((complete/(sum==0)? 1:sum)*100);
@@ -13,7 +11,6 @@ app.controller('StatsViewController', function ($scope,$location,$indexedDB,Stat
   });
 
   StatsData.getMonthTaskAchivementRate($scope.beforeDate ,function(data,sum,complete){
-    console.log(sum+"/"+complete);
     $scope.beforeTodoSum = sum;
     $scope.beforeTodoCompleted = complete;
     $scope.beforeMonthTaskRate = Math.floor((complete/(sum==0)? 1:sum)*100);
@@ -37,7 +34,6 @@ function drawDaylyRateGraph(id,data,currentDate){
         continue;
       }
       for(var k=0;k<data[j]["data"]["data"].length;k++){
-        console.log(data[j]["data"]["data"][k]);
         sumTask++;
         if(data[j]["data"]["data"][k]["complete"]) completeTask++;
       }
@@ -86,8 +82,4 @@ function drawDaylyRateGraph(id,data,currentDate){
       .scale(yScale)
       .orient("left")
     )
-
-
-
-
 }

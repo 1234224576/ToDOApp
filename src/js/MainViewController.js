@@ -8,14 +8,11 @@ app.controller('MainViewController', function ($scope,$indexedDB,$location,write
   //        // do something
   //      });
   //    });
-
-
   var today = new Date();
   getData(today,true);
   var yesterday = new Date();
   yesterday.setDate(today.getDate() - 1);
   getData(yesterday,false);
-
 
   $scope.tapAddBtn = function(){
     if($scope.todoContent == undefined || $scope.todoContent == "") return;
